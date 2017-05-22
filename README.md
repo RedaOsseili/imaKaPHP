@@ -29,12 +29,12 @@ $ik->delete('table_name','sys_id');
 
 ## List of operators
 
-BETWEEN, value1@value2 : BETWEEN 
-= : EQUALS
-!= : IS NOT
-* : CONTAINS
-*_ : STARS WITH
-!* = NOT LIKE
+* BETWEEN, value1@value2 : BETWEEN 
+* = : EQUALS
+* != : IS NOT
+* * : CONTAINS
+* *_ : STARS WITH
+* !* = NOT LIKE
 
 ## How does it work ? Sample code :
 
