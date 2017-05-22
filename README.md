@@ -2,10 +2,43 @@
 
 imaKaPHP is a micro library for ServiceNow. It provides multiple functions to retrieve, add, update and delete data through your PHP scripts. This is an alpha version, many improvements are incoming such as : Recursive Data Retrievement, Multi-conditions, Select Specific Fields...
 
-## How it works ?
+## Installation
+
+The installation is pretty easy. Just edit the ***config.php*** with your instance URL and credentials and include the library in your file using :
 
 ```php
-<?php
+
+include('IK_PHP.php');
+$ik = new IK_PHP();
+
+```
+
+## How does it work ? Basic functions :
+
+```php
+
+$incidents = $ik->where('table_name','table_column','operator','value');
+
+$ik->insert('table_name','JSON');
+
+$ik->update('table_name','sys_id','JSON WITH THE NEW VALUES');
+
+$ik->delete('table_name','sys_id');
+
+```
+
+## List of operators
+
+BETWEEN, value1@value2 : BETWEEN 
+= : EQUALS
+!= : IS NOT
+* : CONTAINS
+*_ : STARS WITH
+!* = NOT LIKE
+
+## How does it work ? Sample code :
+
+```php
 
 include('IK_PHP.php');
 
@@ -59,18 +92,10 @@ $incidents_with_new_state = $ik->getBy('incident','state','1');
 var_dump($incidents_with_new_state);
 
 
-?>
-
-
 ```
 ## Motivation
 
 The project is based on PHP programming language, it helps you to interconnect easily your web application with your ServiceNow instance.
-
-## Installation
-
-Just edit the ***config.php*** with your instance URL and credentials. 
-
 
 ## Contributors
 
