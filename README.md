@@ -32,7 +32,7 @@ $ik->delete('table_name','sys_id');
 * BETWEEN, value1@value2 : BETWEEN 
 * = : EQUALS
 * != : IS NOT
-* * : CONTAINS
+* \* : CONTAINS
 * *_ : STARS WITH
 * !* = NOT LIKE
 
